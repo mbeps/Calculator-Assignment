@@ -117,7 +117,7 @@ public class Entry {
   /**
    * Sets a new type of the entry object.
    * 
-   * @param str (Type): new type
+   * @param type (Type): new type
    * @author Maruf
    */
   public void setType(Type type) {
@@ -142,7 +142,8 @@ public class Entry {
 
     // Added from CS1812
     Entry other = (Entry) obj;
-    if (Float.floatToIntBits(number) != Float.floatToIntBits(other.number)) {// Check if the floating point
+    // Check if the floating point
+    if (Float.floatToIntBits(number) != Float.floatToIntBits(other.number)) {
       return false;
     }
     if (str == null) {
@@ -169,8 +170,8 @@ public class Entry {
     final int prime = 31;
     int result = 1;
     result = prime * result + Float.floatToIntBits(number);
-    result = prime * result + ((str == null) ? 0 : str.hashCode()); // Check if string is not null before working out
-                                                                    // the string hash
+    // Check if string is not null before working out the string hash
+    result = prime * result + ((str == null) ? 0 : str.hashCode()); 
     result = prime * result + ((type == null) ? 0 : type.hashCode());
     return result;
   }
