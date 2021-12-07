@@ -2,12 +2,16 @@ package uk.ac.rhul.cs2800;
 
 import java.lang.Character;
 
+/**
+ * Implements Shunting Yard algorithm. 
+ * Converts infix expression to postfix expression. 
+ */
 public class ShuntingYard {
   private static Stack<Character> stack;
 
   /**
-   * Check whether character passed is a letter or digit. 
-   * Symbols do count as letter or digit. 
+   * Check whether character passed is a letter or digit.
+   * Symbols do count as letter or digit.
    * 
    * @param character (char): character to be checked
    * @return (boolean): whether character is letter / digit

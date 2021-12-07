@@ -1,9 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.EmptyStackException;
-
 import org.junit.jupiter.api.*;
 
 public class TestShuntingYard {
@@ -15,7 +13,7 @@ public class TestShuntingYard {
      * 1 - Method hardcoded to return 1 (pass)
      */
     assertEquals(1, ShuntingYard.getPrecedence('+'),
-      "Test to see if the correct precedence is returned when sign is +");
+        "Test to see if the correct precedence is returned when sign is +");
   }
 
   @Test
@@ -24,7 +22,7 @@ public class TestShuntingYard {
      * 1 - Method hardcoded to return 1 (pass)
      */
     assertEquals(1, ShuntingYard.getPrecedence('-'),
-      "Test to see if the correct precedence is returned when sign is -");
+        "Test to see if the correct precedence is returned when sign is -");
   }
 
   @Test
@@ -34,7 +32,7 @@ public class TestShuntingYard {
      * 2 - Added if statement to detect sign (pass)
      */
     assertEquals(2, ShuntingYard.getPrecedence('*'),
-      "Test to see if the correct precedence is returned when sign is *");
+        "Test to see if the correct precedence is returned when sign is *");
   }
 
   @Test
@@ -44,7 +42,7 @@ public class TestShuntingYard {
      * 2 - Added if statement to detect sign (pass)
      */
     assertEquals(2, ShuntingYard.getPrecedence('/'),
-      "Test to see if the correct precedence is returned when sign is /");
+        "Test to see if the correct precedence is returned when sign is /");
   }
 
   @Test
@@ -54,7 +52,7 @@ public class TestShuntingYard {
      * 2 - Added if statement to detect sign (pass)
      */
     assertEquals(3, ShuntingYard.getPrecedence('^'),
-      "Test to see if the correct precedence is returned when sign is ^");
+        "Test to see if the correct precedence is returned when sign is ^");
   }
 
   @Test
@@ -64,7 +62,7 @@ public class TestShuntingYard {
      * 2 - Added if statement to detect sign (pass)
      */
     assertEquals(-1, ShuntingYard.getPrecedence('d'),
-      "Test to see if the correct precedence is returned when sign is not operator");
+        "Test to see if the correct precedence is returned when sign is not operator");
   }
 
   // ^ Converter
@@ -84,8 +82,8 @@ public class TestShuntingYard {
      * 2 - Add if statement to push into stack (pass)
      * 3 - Check to see it ( is not the last element in the stack (pass)
      */
-    assertEquals("Invalid Expression", ShuntingYard.converter("("), 
-      "( cannot be the last element in an expression");
+    assertEquals("Invalid Expression", ShuntingYard.converter("("),
+        "( cannot be the last element in an expression");
   }
 
   @Test
@@ -97,8 +95,8 @@ public class TestShuntingYard {
      * 4 - Add if statement to check bracket and increment to output (pass)
      * 5 - Check if the stack is not empty and last element is not ( (pass)
      */
-    assertEquals("k", ShuntingYard.converter("(k)"), 
-      "Check if character is incremented to output");
+    assertEquals("k", ShuntingYard.converter("(k)"),
+        "Check if character is incremented to output");
   }
 
   @Test
@@ -111,7 +109,7 @@ public class TestShuntingYard {
      * 5 - Check if the stack is not empty and last element is not ( (pass)
      */
     assertThrows(EmptyStackException.class, () -> ShuntingYard.converter(")"),
-      "Check if EmptyStackException is thrown when popping empty stack");
+        "Check if EmptyStackException is thrown when popping empty stack");
   }
 
   @Test
@@ -123,8 +121,8 @@ public class TestShuntingYard {
      * 4 - Add if statement to check bracket and increment to output (pass)
      * 5 - Check if the stack is not empty and last element is not ( (pass)
      */
-    assertEquals("+", ShuntingYard.converter("+"), 
-      "Test if operands are returned last in the output string");
+    assertEquals("+", ShuntingYard.converter("+"),
+        "Test if operands are returned last in the output string");
   }
 
   @Test
