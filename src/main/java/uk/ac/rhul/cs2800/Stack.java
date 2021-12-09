@@ -93,6 +93,7 @@ public class Stack<T> {
    * Method only returns item from the stack if it is not empty. 
    * @param index (int): position of item to be returned
    * @return (T): element in the desired position
+   * @author Maruf
    */
   public T getIndexItem(int index) {
     if (size() == 0) {
