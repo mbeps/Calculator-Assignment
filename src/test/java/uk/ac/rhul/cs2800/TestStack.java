@@ -160,7 +160,7 @@ class TestStack {
   }
 
   @Test
-  void genericOperationsTestSummary() {
+  void genericOperationsTestSummary() { // Test 13
     // 1 - Whether all the operations that worked with primitive type also work with
     // generic types
     Stack<Object> genericTestStack = new Stack<Object>();
@@ -173,4 +173,26 @@ class TestStack {
     assertEquals(genericTestStack.size(), 2, "Check if generic elements can be pushed and popped");
   }
 
+  @Test
+  void testGetIndexItemEmpty() { // Test 14
+    /**
+     * 1 - Test empty stack (fail)
+     * 2 - Added check to return desired exception (pass)
+     */
+    assertThrows(EmptyStackException.class, () -> testStack.getIndexItem(5),
+        "Check if EmptyStackException is thrown when trying to return element from empty stack");
+  }
+
+  @Test
+  void testGetIndex() { // Test 8
+    /**
+     * 1 - ArrayIndexOutOfBounds returned (undesired exception) 
+     * 2 - Add check to see if the stack is empty (pass)
+     */
+    testStack.push(1);
+    testStack.push(7);
+    testStack.push(5);
+    assertEquals(5, testStack.getIndexItem(2), 
+        "Check if correct item is returned when choosing index position");
+  }
 }
