@@ -41,7 +41,7 @@ public class ShuntingYard {
   }
 
   /**
-   * Converts infix notation to postfix notation
+   * Converts infix notation to postfix notation.
    * 
    * @param expression (String): expression to be converted
    * @return (String): converted postfix expression

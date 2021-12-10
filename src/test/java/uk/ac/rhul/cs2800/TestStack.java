@@ -6,7 +6,7 @@ import org.junit.jupiter.api.*;
 
 class TestStack {
   /**
-   * 1 - Originally primitive, made the tests generic as the stack class has been
+   * 1 - Originally primitive, made the tests generic as the stack class has been.
    * made generic
    */
   private Stack<Integer> testStack;
@@ -22,8 +22,9 @@ class TestStack {
   @Test
   void testSizeEqualsZero() { // Test 2
     /**
-     * 1 - Return hardcoded to 0 2 - Private variable size implemented. Replaced
-     * with array 3 - Function tracks size of Array, Fail since array is fixed size
+     * 1 - Return hardcoded to 0 
+     * 2 - Private variable size implemented. Replaced with array 
+     * 3 - Function tracks size of Array, Fail since array is fixed size
      * 4 - Function tracks size ArrayList which is dynamic do no fail
      */
     assertEquals(testStack.size(), 0, "Check if size equals 0");
@@ -47,10 +48,11 @@ class TestStack {
   @Test
   void testPush() { // Test 3
     /**
-     * 1 - Hard coding the value to return 1 2 - Implemented array but not mutable
-     * so size set was returned (incorrect) 3 - Implementing ArrayList to store
-     * dynamic amount of data and generic (correct size returned) 4 - size() changed
-     * to work out the index
+     * 1 - Hard coding the value to return 1 
+     * 2 - Implemented array but not mutable so size set was returned (incorrect) 
+     * 3 - Implementing ArrayList to store dynamic amount of data and generic 
+     *    (correct size returned) 
+     * 4 - size() changed to work out the index
      */
     testStack.push(5);
     assertEquals(testStack.size(), 1, "Check if data has been added to stack");
@@ -140,11 +142,13 @@ class TestStack {
   @Test
   void pushGeneric() { // Test 11
     /**
-     * 1 - Different constructors for each type 2 - Generic types not supported
-     * (Fail to compile) 3 - Initially, only supported primitive int
+     * 1 - Different constructors for each type.
+     * 2 - Generic types not supported (Fail to compile).
+     * 3 - Initially, only supported primitive int.
      */
-    Stack<Object> genericTestStack = new Stack<Object>(); // New generic object class to test if any generic type can be
-                                                          // passed
+    
+    // New generic object class to test if any generic type can be passed
+    Stack<Object> genericTestStack = new Stack<Object>(); 
     Object genericPayload = new Object();
     genericTestStack.push(genericPayload);
     assertEquals(genericTestStack.isEmpty(), false, "Check if stack supports generic types");
@@ -152,8 +156,9 @@ class TestStack {
 
   @Test
   void pushString() { // Test 12
-    Stack<String> stringTestStack = new Stack<String>(); // New generic object class to test if any generic type can be
-                                                         // passed
+    
+    // New generic object class to test if any generic type can be passed
+    Stack<String> stringTestStack = new Stack<String>();
     String stringPayload = new String();
     stringTestStack.push(stringPayload);
     assertEquals(stringTestStack.isEmpty(), false, "Check if stack supports string types");
@@ -186,13 +191,13 @@ class TestStack {
   @Test
   void testGetIndex() { // Test 8
     /**
-     * 1 - ArrayIndexOutOfBounds returned (undesired exception) 
+     * 1 - ArrayIndexOutOfBounds returned (undesired exception)
      * 2 - Add check to see if the stack is empty (pass)
      */
     testStack.push(1);
     testStack.push(7);
     testStack.push(5);
-    assertEquals(5, testStack.getIndexItem(2), 
+    assertEquals(5, testStack.getIndexItem(2),
         "Check if correct item is returned when choosing index position");
   }
 }

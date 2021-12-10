@@ -11,22 +11,26 @@ class TestSymbol {
      * Added toString implementation (pass) 3 - Added all other symbols and toString
      * implementation
      */
-    assertEquals(Symbol.LEFT_BRACKET.toString(), "(", "Check if left bracket is sign returned correctly");
+    assertEquals(Symbol.LEFT_BRACKET.toString(), "(", 
+        "Check if left bracket is sign returned correctly");
   }
 
   @Test
   void testSymbolRightBracket() {
-    assertEquals(Symbol.RIGHT_BRACKET.toString(), ")", "Check if right bracket sign is returned correctly");
+    assertEquals(Symbol.RIGHT_BRACKET.toString(), ")", 
+        "Check if right bracket sign is returned correctly");
   }
 
   @Test
   void testSymbolTimes() {
-    assertEquals(Symbol.TIMES.toString(), "×", "Check if times is returned correctly correctly");
+    assertEquals(Symbol.TIMES.toString(), "×", 
+        "Check if times is returned correctly correctly");
   }
 
   @Test
   void testSymbolDivide() {
-    assertEquals(Symbol.DIVIDE.toString(), "÷", "Check if division sign is returned correctly");
+    assertEquals(Symbol.DIVIDE.toString(), "÷", 
+        "Check if division sign is returned correctly");
   }
 
   @Test
